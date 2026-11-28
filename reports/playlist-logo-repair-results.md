@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 10:05 UTC**  
+Run time: **2026-11-28 10:09 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,34 +9,27 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1379 | 0 | 20 | 0 | 0 | 0 | 0 | 0 | 20 |
+| IPTV-Playlist.m3u | 1373 | 0 | 14 | 0 | 0 | 0 | 0 | 0 | 14 |
 | International-Playlist.m3u | 3332 | 0 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 123 | Raatdin Bangla | (missing) | (none) | Exact external logo asset |  | Download/validation failed: <urlopen error [Errno -2] Name or service not known> |
-| IPTV-Playlist.m3u | 123 | Raatdin Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 931 | Rock TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1227 | Quran Radio TV SMC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 929 | Rock TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1225 | Quran Radio TV SMC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1313 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1315 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1317 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1319 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1403 | Harlem Globetrotters | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1489 | RS Sports 1 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1491 | RS Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1493 | RS Sports 3 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1495 | RS Sports 4 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1497 | RS Sports 5 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1517 | Sky Sport LaLiga | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1521 | Sky Sports GT | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1607 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1609 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1611 | TUDN MX | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1635 | USA ACCN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 2547 | Sport 1 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 2549 | Sport 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1401 | Harlem Globetrotters | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1505 | Sky Sport LaLiga | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1509 | Sky Sports GT | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1595 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1597 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1599 | TUDN MX | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 1623 | USA ACCN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 2535 | Sport 1 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| IPTV-Playlist.m3u | 2537 | Sport 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 809 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1041 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 1041 | DanceTV Algorhythm | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
